@@ -8,9 +8,7 @@
 </head>
 
 <body ng-app="myModule">
-    {{5+5}}
     <div ng-controller="myController">
-        {{error}}
         <table class="table">
             <thead>
                 <tr>
@@ -24,11 +22,11 @@
             </thead>
             <tbody>
                 <tr ng-repeat="movie in movies">
-                    <td>{{movie.Title}}</td>
-                    <td>{{movie.ReleaseDate}}</td>
-                    <td>{{movie.Genre}}</td>
-                    <td>{{movie.Price}}</td>
-                    <td>{{movie.Rating}}</td>
+                    <td>{{movie.title}}</td>
+                    <td>{{movie.releaseDate}}</td>
+                    <td>{{movie.genre}}</td>
+                    <td>{{movie.price}}</td>
+                    <td>{{movie.rating}}</td>
                     <td>
                         <a asp-action="Edit" asp-route-id="movie.Id">Edit</a> |
                         <a asp-action="Details" asp-route-id="movie.Id">Details</a> |

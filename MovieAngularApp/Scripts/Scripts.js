@@ -3,10 +3,13 @@
     .controller("myController", function ($scope, $http, $log) {
         $http({
             method: 'GET',
-            url: 'http://localhost:44364/movies'
+            url: 'https://localhost:44364/movies'
         })
             .then(function (response) {
-                $scope.movies = response.data;
+                var movies;
+                movies = response.data;
+                $scope.movies = movies;
+                //$scope.movies = response.data; need to comment use strict-data in angular.js
                 $log.info(response);
             }, function (reason) {
                 $scope.error = reason.data;
@@ -14,3 +17,5 @@
             }
             )
     })
+
+
